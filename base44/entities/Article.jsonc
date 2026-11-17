@@ -1,0 +1,65 @@
+{
+  "name": "Article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string",
+      "description": "Article body, paragraphs separated by blank lines"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ai",
+        "engineering",
+        "data",
+        "transformation",
+        "research",
+        "company"
+      ],
+      "default": "ai"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author": {
+      "type": "string",
+      "default": "Tetroz Editorial"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "read_minutes": {
+      "type": "number",
+      "default": 5
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "published",
+        "draft",
+        "archived"
+      ],
+      "default": "published"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "excerpt",
+    "body",
+    "category"
+  ]
+}

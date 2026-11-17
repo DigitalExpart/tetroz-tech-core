@@ -1,0 +1,107 @@
+{
+  "name": "Inquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the person submitting"
+    },
+    "email": {
+      "type": "string",
+      "description": "Business email address"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "inquiry_type": {
+      "type": "string",
+      "enum": [
+        "general",
+        "software",
+        "ai_automation",
+        "digital_transformation",
+        "enterprise",
+        "cloud_security",
+        "data_analytics",
+        "partnership",
+        "investment",
+        "media",
+        "careers"
+      ],
+      "default": "general"
+    },
+    "service_interest": {
+      "type": "string"
+    },
+    "budget_range": {
+      "type": "string",
+      "enum": [
+        "not_sure",
+        "under_10k",
+        "10k_25k",
+        "25k_50k",
+        "50k_100k",
+        "100k_plus"
+      ]
+    },
+    "timeline": {
+      "type": "string",
+      "enum": [
+        "exploring",
+        "under_1_month",
+        "1_3_months",
+        "3_6_months",
+        "6_plus_months"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "file_uri": {
+      "type": "string",
+      "description": "Private storage URI for an attached brief or document"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "qualified",
+        "proposal",
+        "negotiation",
+        "won",
+        "lost"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "follow_up_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "source_page": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "message",
+    "consent"
+  ]
+}

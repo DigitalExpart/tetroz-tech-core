@@ -1,0 +1,54 @@
+{
+  "name": "JobApplication",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "role_interest": {
+      "type": "string"
+    },
+    "opening_title": {
+      "type": "string"
+    },
+    "portfolio_url": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "resume_uri": {
+      "type": "string",
+      "description": "Private storage URI for the uploaded resume"
+    },
+    "resume_name": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "received",
+        "reviewing",
+        "interview",
+        "offer",
+        "declined"
+      ],
+      "default": "received"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "consent"
+  ]
+}

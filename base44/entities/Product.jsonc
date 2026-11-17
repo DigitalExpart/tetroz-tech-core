@@ -1,0 +1,66 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL slug, unique per product"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "research",
+        "development",
+        "beta",
+        "available",
+        "discontinued"
+      ],
+      "default": "concept"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pricing_note": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string"
+    },
+    "accent": {
+      "type": "string",
+      "enum": [
+        "cyan",
+        "violet",
+        "lime"
+      ],
+      "default": "cyan"
+    },
+    "order_index": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "tagline",
+    "description",
+    "status"
+  ]
+}
